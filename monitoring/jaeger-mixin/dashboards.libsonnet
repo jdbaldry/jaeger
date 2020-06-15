@@ -1,4 +1,4 @@
-local g = (import 'grafana-builder/grafana.libsonnet') + {
+local g = (import 'github.com/grafana/jsonnet-libs/grafana-builder/grafana.libsonnet') + {
   qpsPanelErrTotal(selectorErr, selectorTotal):: {
     local expr(selector) = 'sum(rate(' + selector + '[1m]))',
 
